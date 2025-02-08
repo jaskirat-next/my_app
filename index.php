@@ -74,13 +74,13 @@
 
     <div class="swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="./images/Hydraulic-Gear-Pump-2P-Series.png" alt="Slide 1"></div>
-            <div class="swiper-slide"><img src="./images/Hydraulic-Gear-Pump-2P-Series.png" alt="Slide 1"></div>
-            <div class="swiper-slide"><img src="./images/Hydraulic-Gear-Pump-2P-Series.png" alt="Slide 1"></div>
+            <div class="swiper-slide"><img src="./images/machine1.jpg" alt="Slide 1"></div>
+            <div class="swiper-slide"><img src="./images/machine2.jpg" alt="Slide 1"></div>
+            <div class="swiper-slide"><img src="./images/machine3.jpg" alt="Slide 1"></div>
         </div>
         <!-- Navigation buttons -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
         <!-- Pagination -->
         <div class="swiper-pagination"></div>
     </div>
@@ -92,10 +92,10 @@
     <script>
         var swiper = new Swiper('.swiper', {
             loop: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
