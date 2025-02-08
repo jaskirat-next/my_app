@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to our hotel. We provide the best services for your stay.">
+    <title>Hotel Website</title>
+    <link rel="stylesheet" href="styles.scss">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+        integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+</head>
+
+<body>
+    <section class="navbar">
+        <div class="container">
+            <div class="left">
+                <div class="img_area">
+                    <img src="./images/hotel_logo.jpeg" alt="logo">
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="phone_content">
+                    <div class="icon_area">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <div class="number_content">
+                        <span>Call us for help!</span>
+                        <div class="number">
+                            97814-58647
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location_content">
+                    <div class="icon_area">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="address">
+                        BXXIX-2254/1, Kanganwal Road, P. O.<br>
+                        Jugiana, Ludhiana, Punjab, India - 141120
+                    </div>
+                </div>
+
+                <div class="mail">
+                    <div class="icon_area">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="mail_content">
+                        zjaskiratsingh@gmail.com
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <nav class="header_navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./images/Hydraulic-Gear-Pump-2P-Series.png" alt="Slide 1"></div>
+            <div class="swiper-slide"><img src="./images/Hydraulic-Gear-Pump-2P-Series.png" alt="Slide 1"></div>
+            <div class="swiper-slide"><img src="./images/Hydraulic-Gear-Pump-2P-Series.png" alt="Slide 1"></div>
+        </div>
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</body>
+
+</html>
