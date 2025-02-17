@@ -85,6 +85,24 @@
         <div class="swiper-pagination"></div>
     </div>
 
+    <!-- Swiper JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper', {
+            loop: true,
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+
     <div class="cards">
         <div class="container">
             <div class="row">
@@ -150,23 +168,48 @@
         </div>
     </div>
     </div>
-    <!-- Swiper JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper', {
-            loop: true,
-            // navigation: {
-            //     nextEl: '.swiper-button-next',
-            //     prevEl: '.swiper-button-prev',
-            // },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-    </script>
+    <div class="delivered">
+        <h3>EVERY THING DELIVERED AT YOUR DOORSTEP</h3>
+        <div class="cards2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                        <div class="img_area">
+                            <img src="./images/Black.png" alt="img">
+                        </div>
+                        <p>We provide products or services of the highest standard, ensuring exceptional performance,
+                            durability, and satisfaction.</p>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                        <div class="img_area">
+                            <img src="./images/Black1.png" alt="img">
+                        </div>
+                        <p> We cover the cost of shipping for your order, so you don’t have to pay any additional fees
+                            for delivery.</p>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                        <div class="img_area">
+                            <img src="./images/Black2.png" alt="img">
+                        </div>
+                        <p>We take every precaution to ensure your order reaches you safely and in perfect condition.
+                            From careful packaging to reliable shipping methods.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="contactus">
+        <div class="img_area">
+            <img src="./images/contact4.jpg" alt="contact_img">
+        </div>
+        <div class="text">
+            <h3>Contact Us</h3>
+            <p>Get in touch with us</p>
+        </div>
+
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
