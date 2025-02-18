@@ -49,11 +49,9 @@
                 </div>
 
                 <div class="mail">
-                    <div class="icon_area">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="mail_content">
-                        zjaskiratsingh@gmail.com
+                    <div class="buttons">
+                        <button type="button">Signup</button>
+                        <button type="button">Login</button>
                     </div>
                 </div>
 
@@ -202,13 +200,13 @@
 
     <section class="contactus">
         <div class="img_area">
-            <img src="./images/contact4.jpg" alt="contact_img">
+            <img src="./images/contact2.jpg" alt="contact_img">
         </div>
         <div class="text">
             <h3>Contact Us</h3>
             <p>Get in touch with us</p>
+            <button type="button" onclick="window.location.href='./auth/contactus.php'">Contact us</button>
         </div>
-
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>

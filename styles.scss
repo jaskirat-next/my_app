@@ -7,7 +7,7 @@
 .navbar {
   height: 80px;
   width: 100%;
-  background-color: rgb(211, 211, 37);
+  background-color: #ffffff;
   padding: 10px 0;
   .container {
     display: flex;
@@ -34,17 +34,18 @@
           i {
             font-size: 25px;
             margin-right: 15px;
+            color: #000080;
           }
         }
         .number_content {
           span {
             font-size: 18px;
-            color: #120600;
+            color: #000080;
             font-weight: 400;
           }
           .number {
             font-size: 18px;
-            color: #666;
+            color: #6495ED;
             font-weight: 400;
           }
         }
@@ -56,11 +57,12 @@
           i {
             font-size: 25px;
             margin-right: 15px;
+            color: #000080;
           }
         }
         .address {
           font-size: 18px;
-          color: #120600;
+          color: #000080;
           font-weight: 400;
         }
       }
@@ -76,7 +78,7 @@
         }
         .mail_content {
           font-size: 18px;
-          color: #120600;
+          color: #000080;
           font-weight: 400;
         }
       }
@@ -85,7 +87,7 @@
 }
 .header_navbar {
   height: 55px;
-  background-color: #120600;
+  background-color: #454545;
   padding: 10px 0;
 
   .container {
@@ -181,28 +183,36 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
-      object-position: bottom;
+      object-position: center;
       opacity: 1.8;
     }
   }
   .text {
     position: absolute;
-    top: 35px;
-    right: 79px;
-    border: 2px solid #66d317;
-    padding: 10px 30px;
+    top: 156px;
+    left: 274px;
     h3 {
       font-size: 50px;
-      font-weight: 700;
+      font-weight: 500;
       color: rgb(251, 251, 248);
       margin-bottom: 0;
       line-height: 40px;
     }
     p {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 500;
       color: #ffffff;
       margin-bottom: 0;
+      padding-bottom: 20px;
+    }
+    button {
+      padding: 10px 40px;
+      font-size: 18px;
+      font-weight: 400;
+      border-radius: 25px;
+      background-color: #ffffff;
+      border: none;
+      color: rgb(33, 97, 216)
     }
   }
 }
