@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    height: 80px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px 0;
+    .container {
+      display: flex;
+      .left {
+        width: 30%;
+        .img_area {
+          height: 60px;
+          width: 65px;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      .right {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        .phone_content {
+          display: flex;
+          align-items: center;
+          .icon_area {
+            i {
+              font-size: 25px;
+              margin-right: 15px;
+              color: #000080;
+            }
+          }
+          .number_content {
+            span {
+              font-size: 18px;
+              color: #000080;
+              font-weight: 400;
+            }
+            .number {
+              font-size: 18px;
+              color: #6495ED;
+              font-weight: 400;
+            }
+          }
+        }
+        .location_content {
+          display: flex;
+          align-items: center;
+          .icon_area {
+            i {
+              font-size: 25px;
+              margin-right: 15px;
+              color: #000080;
+            }
+          }
+          .address {
+            font-size: 18px;
+            color: #000080;
+            font-weight: 400;
+          }
+        }
+  
+        .mail {
+          display: flex;
+          align-items: center;
+          .icon_area {
+            i {
+              font-size: 25px;
+              margin-right: 15px;
+            }
+          }
+          .mail_content {
+            font-size: 18px;
+            color: #000080;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  .header_navbar {
+    height: 55px;
+    background-color: #454545;
+    padding: 10px 0;
+  
+    .container {
+      ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 130px;
+  
+        li {
+          a {
+            color: white;
+  
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: 600;
+  
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  .swiper {
+    // width: 100%;
+    // height: 400px;
+    .swiper-wrapper {
+      .swiper-slide {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .cards {
+    background-color: #9b9491;
+    padding: 90px 0;
+    .card {
+      margin-bottom: 20px;
+      .img_area {
+        height: 200px;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+  .delivered {
+    padding: 90px 0;
+    h3 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #120600;
+      text-align: center;
+      padding-bottom: 90px;
+    }
+    .cards2 {
+      .img_area {
+        height: 60px;
+        width: 114px;
+        margin: 0 auto 20px;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+  
+  .contactus {
+    position: relative;
+    .img_area {
+      height: 350px;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 1.8;
+      }
+    }
+    .text {
+      position: absolute;
+      top: 156px;
+      left: 274px;
+      h3 {
+        font-size: 50px;
+        font-weight: 500;
+        color: rgb(251, 251, 248);
+        margin-bottom: 0;
+        line-height: 40px;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 500;
+        color: #ffffff;
+        margin-bottom: 0;
+        padding-bottom: 20px;
+      }
+      button {
+        padding: 10px 40px;
+        font-size: 18px;
+        font-weight: 400;
+        border-radius: 25px;
+        background-color: #ffffff;
+        border: none;
+        color: rgb(33, 97, 216)
+      }
+    }
+  }
+  
