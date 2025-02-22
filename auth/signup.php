@@ -25,13 +25,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
       $result = mysqli_query($conn , $sql);
       if($result){
         $setalert = true;
-        header("Location: signup.php");
+        header("Location: signup.php?success=1");
         exit;
       }
       
     }
   }
 }
+
+$setalert = isset($_GET['success']) ? true : false;
 ?>
 
 

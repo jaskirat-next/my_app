@@ -1,3 +1,12 @@
+<?php
+if(!isset($_SESSION['logedin']) || $_SESSION['logedin'] != true){
+    $login = false;
+}
+else{
+    $login = true;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
-    <link rel="stylesheet" href="../sass/navbar.scss">
+    <link rel="stylesheet" href="/my_app/sass/navbar.scss">
 </head>
 
 <body>
@@ -13,7 +22,7 @@
         <div class="container">
             <div class="left">
                 <div class="img_area">
-                    <img src="../images/hotel_logo.jpeg" alt="logo">
+                    <img src="/my_app/images/hotel_logo.jpeg" alt="logo">
                 </div>
             </div>
 
@@ -42,8 +51,16 @@
 
                 <div class="mail">
                     <div class="buttons">
-                        <button type="button" onclick="window.location.href='./auth/signup.php'">Signup</button>
-                        <button type="button" onclick="window.location.href='./auth/login.php'">Login</button>
+                        <?php
+                        if(!$login):?>
+                           
+                            <button type="button" onclick="window.location.href='/my_app/auth/signup.php'">Signup</button>
+                            <button type="button" onclick="window.location.href='/my_app/auth/login.php'">Login</button>
+                          
+                        <?php else:?>
+                            <button type="button" onclick="window.location.href='/my_app/auth/logout.php'">Logout</button>
+                        <?php endif; ?>
+                    
                     </div>
                 </div>
 
@@ -54,9 +71,9 @@
     <nav class="header_navbar">
         <div class="container">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="/my_app/index.php">Home</a></li>
                 <li><a href="#">About us</a></li>
-                <li><a href="#">Products</a></li>
+                <li><a href="/my_app/product.php">Products</a></li>
                 <li><a href="#">Contact us</a></li>
             </ul>
         </div>
