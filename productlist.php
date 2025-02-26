@@ -36,13 +36,13 @@
     let alcat = [];
     let displayProduct = async (allchechkcat=[]) => {
         productDiv.innerHTML = '';
-        categoryDiv.innerHTML = '';
+      
         let product = await fetch('https://fakestoreapi.com/products');
         let finalProduct = await product.json();
         finalProduct.forEach(element => {
             if (!alcat.includes(element.category)) {
                 categoryDiv.innerHTML += `<label for="">
-                    <input type="checkbox" id="cat" onclick='categoryFliter()' value="${element.category}"> ${element.category}
+                    <input type="checkbox"  onclick='categoryFilter()' value="${element.category}"> ${element.category}
                 </label>`;
                 alcat.push(element.category);
             }
@@ -64,13 +64,18 @@
             }
         });
     }
-
-   
-    let categoryFliter=()=>{
-        let selectedCategories = [...document.querySelectorAll(".categoryCheckbox:checked")].map(cb => cb.value);
-        displayProduct(selectedCategories);
-}
 displayProduct();
+
+let categoryFilter=()=>{
+    let checkInput = document.querySelectorAll("input[type='checkbox']");
+    let checkdata = [];
+    checkInput.forEach((e)=>{
+        if(e.checked){
+            checkdata.push(e.value);
+        }
+    })
+    displayProduct(checkdata);
+}
 </script>
 
 </html>

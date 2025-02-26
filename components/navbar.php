@@ -73,7 +73,7 @@ else{
             <ul>
                 <li><a href="/my_app/index.php">Home</a></li>
                 <li><a href="#">About us</a></li>
-                <li><a href="/my_app/product.php">Products</a></li>
+                <li><a href="/my_app/productlist.php">Products</a></li>
                 <li><a href="/my_app/auth/contactus.php">Contact us</a></li>
             </ul>
         </div>
