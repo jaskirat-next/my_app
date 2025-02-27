@@ -15,6 +15,7 @@ else{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <link rel="stylesheet" href="/my_app/sass/navbar.scss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -50,18 +51,25 @@ else{
                 </div>
 
                 <div class="mail">
+                <div class="cart_icon">
+                        <a href="checkout.php">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge badgedanger">2</span>
+                        </a>
+                    </div>
                     <div class="buttons">
                         <?php
                         if(!$login):?>
-                           
-                            <button type="button" onclick="window.location.href='/my_app/auth/signup.php'">Signup</button>
-                            <button type="button" onclick="window.location.href='/my_app/auth/login.php'">Login</button>
-                          
+
+                        <button type="button" onclick="window.location.href='/my_app/auth/signup.php'">Signup</button>
+                        <button type="button" onclick="window.location.href='/my_app/auth/login.php'">Login</button>
+
                         <?php else:?>
-                            <button type="button" onclick="window.location.href='/my_app/auth/logout.php'">Logout</button>
+                        <button type="button" onclick="window.location.href='/my_app/auth/logout.php'">Logout</button>
                         <?php endif; ?>
-                    
+
                     </div>
+                    
                 </div>
 
             </div>
@@ -78,6 +86,9 @@ else{
             </ul>
         </div>
     </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -81,6 +81,23 @@
             color: #000080;
             font-weight: 400;
           }
+          .buttons{
+            button{
+              border-radius: 31px;
+              padding: 4px 15px;
+            }
+          }
+          .cart_icon{
+            margin-right: 10px;
+            a{
+              i{
+                font-size: 22px;
+              }
+              span{
+                background-color: red;
+              }
+            }
+          }
         }
       }
     }
