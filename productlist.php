@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="products">
-
+        
 
         </div>
     </div>
@@ -52,7 +52,8 @@
                 allchechkcat=alcat;
             }
             if(allchechkcat.includes(element.category)){
-            productDiv.innerHTML += `<div class="productItem">
+            productDiv.innerHTML += `<form action="manage_cart.php" method="POST">
+            <div class="productItem">
                 <div class="img_area">
                     <img src="${element.image}" alt="product">
                 </div>
@@ -60,9 +61,12 @@
                     <h4>${element.category}</h4>
                     <p>Price Rs. ${element.price} | ${element.rating.rate}</p>
                     <h3>${element.title}</h3>
-                    <button>Add Cart</button>
+                    <button name="addCart">Add Cart</button>
+                    <input type="hidden" name="product_title" value="${element.title}" />
+                    <input type="hidden" name="price" value="${element.price}" />
                 </div>
-            </div>`
+            </div>
+            </form>`
             }
         });
     }

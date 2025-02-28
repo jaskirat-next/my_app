@@ -1,70 +1,91 @@
-<!DOCTYPE html>
+
+
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <?php include "./components/navbar.php" ?>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="/my_app/sass/check_out.scss" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+
 <body>
-    <div class="container mt-5">
-        <h2>Checkout</h2>
-        
-        <!-- Cart Summary -->
-        <div class="card p-3 mb-3">
-            <h4>Cart Summary</h4>
-            <ul id="cart-items" class="list-group mb-3">
-                <!-- Items will be added dynamically -->
-            </ul>
-            <h5>Total: Rs. <span id="total-price">0</span></h5>
-        </div>
-        
-        <!-- Billing Details -->
-        <div class="card p-3 mb-3">
-            <h4>Billing Details</h4>
-            <form id="checkout-form">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="address" class="form-label">Address</label>
-                    <textarea class="form-control" id="address" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Proceed to Payment</button>
+  <div class="main my-5">
+    <h3>My cart</h3>
+    <div class="container">
+      <table class="table">
+        <thead class="text-center">
+          <tr>
+            <th scope="col">Serial No.</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <?php
+    $total=0;
+    if(isset($_SESSION['cart'])){
+    foreach($_SESSION['cart'] as $key => $value){
+        $total=$total+$value['price'];
+        $sr = $key+1;
+        echo"
+            <tr>
+            <td>$sr</td>
+            <th>$value[item_name]</th>
+            <td>$value[price]</td>
+            <td><input class='text-center' type='number' value='$value[quantity]' min='1' max='10'/></td>
+            <td>
+            <form action='manage_cart.php' method='POST'>
+            <button class='btn btn-sm btn-outline-danger' name='removeItem'>REMOVE</button>
+            <input type='hidden' name='item_Name' value='$value[item_name]' />
             </form>
+            </td>
+            </tr>
+            ";
+
+    }
+    }
+    ?>
+        </tbody>
+      </table>
+
+      <div class="total col-lg-3">
+        <div class="total_content">
+          <h4>Total:</h4>
+          <h5>
+            <?php echo $total ?>
+          </h5>
+          <br>
+          <form>
+            <div class="radio">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Make Payment Online
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Cash on Delivery
+              </label>
+            </div>
+            </div>
+            <button class="btn btn-primary btn-block">Make Purchase</button>
+          </form>
         </div>
+      </div>
     </div>
-    
-    <script>
-        let cart = [
-            { name: "Product 1", price: 500 },
-            { name: "Product 2", price: 300 }
-        ];
-
-        function displayCart() {
-            let cartList = document.getElementById("cart-items");
-            let totalPrice = document.getElementById("total-price");
-            cartList.innerHTML = "";
-            let total = 0;
-
-            cart.forEach(item => {
-                cartList.innerHTML += `<li class='list-group-item'>${item.name} - Rs. ${item.price}</li>`;
-                total += item.price;
-            });
-            totalPrice.innerText = total;
-        }
-        
-        document.getElementById("checkout-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            alert("Order placed successfully!");
-        });
-        
-        displayCart();
-    </script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

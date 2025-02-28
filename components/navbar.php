@@ -5,7 +5,9 @@ if(!isset($_SESSION['logedin']) || $_SESSION['logedin'] != true){
 else{
     $login = true;
 }
-
+?>
+<?php
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +21,7 @@ else{
 </head>
 
 <body>
+
     <section class="navbar">
         <div class="container">
             <div class="left">
@@ -49,12 +52,17 @@ else{
                         Jugiana, Ludhiana, Punjab, India - 141120
                     </div>
                 </div>
-
+                <?php
+                $count = 0;
+                    if(isset($_SESSION['cart'])){
+                        $count = count($_SESSION['cart']);
+                    }
+                ?>
                 <div class="mail">
                 <div class="cart_icon">
                         <a href="checkout.php">
                         <i class="fas fa-shopping-cart"></i>
-                        <span class="badge badgedanger">2</span>
+                        <span class="badge badgedanger"><?php echo $count; ?></span>
                         </a>
                     </div>
                     <div class="buttons">
