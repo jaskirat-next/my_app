@@ -60,7 +60,7 @@
                 <div class="content">
                     <h4>${element.category}</h4>
                     <p>Price Rs. ${element.price} | ${element.rating.rate}</p>
-                    <h3>${element.title}</h3>
+                    <h3><a href="product_detail.php?id=${element.id}">${element.title}</a></h3>
                     <button name="addCart">Add Cart</button>
                     <input type="hidden" name="product_title" value="${element.title}" />
                     <input type="hidden" name="price" value="${element.price}" />
