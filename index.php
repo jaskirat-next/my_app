@@ -21,9 +21,9 @@
     <?php include  "./components/navbar.php" ?>
     <div class="swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="./images/machine1.jpg" alt="Slide 1"></div>
-            <div class="swiper-slide"><img src="./images/machine2.jpg" alt="Slide 1"></div>
-            <div class="swiper-slide"><img src="./images/machine3.jpg" alt="Slide 1"></div>
+            <div class="swiper-slide"><img src="./images/shop1.jpg" alt="Slide 1"></div>
+            <div class="swiper-slide"><img src="./images/shop2.jpg" alt="Slide 1"></div>
+            <div class="swiper-slide"><img src="./images/shop3.jpg" alt="Slide 1"></div>
         </div>
         <!-- Navigation buttons -->
         <!-- <div class="swiper-button-next"></div>

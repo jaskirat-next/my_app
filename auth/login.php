@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
           session_start();
           $_SESSION['logedin'] = true;
           $_SESSION['username'] = $username;
-          header("Location: ../product.php");
+          header("Location: ../index.php");
           exit;
       }
       else{

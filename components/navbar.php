@@ -1,3 +1,7 @@
+
+<?php
+session_start();
+?>
 <?php
 if(!isset($_SESSION['logedin']) || $_SESSION['logedin'] != true){
     $login = false;
@@ -6,9 +10,7 @@ else{
     $login = true;
 }
 ?>
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
