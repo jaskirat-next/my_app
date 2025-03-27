@@ -22,8 +22,8 @@
     <div class="swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="./images/shop1.jpg" alt="Slide 1"></div>
-            <div class="swiper-slide"><img src="./images/shop2.jpg" alt="Slide 1"></div>
-            <div class="swiper-slide"><img src="./images/shop3.jpg" alt="Slide 1"></div>
+            <div class="swiper-slide"><img src="./images/watches.jpg" alt="Slide 1"></div>
+            <div class="swiper-slide"><img src="./images/men_web.jpg" alt="Slide 1"></div>
         </div>
         <!-- Navigation buttons -->
         <!-- <div class="swiper-button-next"></div>
